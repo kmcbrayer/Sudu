@@ -7,10 +7,10 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            headerText: 'Mikey likes it!',
             liked: false
         };
     }
-
 
     componentDidMount() {
         this.getInitialState()
@@ -24,8 +24,8 @@ export default class App extends Component {
         var liked = this.state.liked ? 'likes it' : 'not lovin it';
         return (
             <View>
-                <AppHeader />
-                <Text>{this.state.liked}</Text>
+                <AppHeader text={this.state.headerText}/>
+                <Text>{liked}</Text>
             </View>
         );
     }

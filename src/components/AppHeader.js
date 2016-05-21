@@ -10,7 +10,7 @@ export default class AppHeader extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.headerText}>
-                    Mikey likes it!
+                    {this.props.text}
                 </Text>
             </View>
         )
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF'
+        backgroundColor: '#F5FCFF',
+        paddingTop: 10
     },
     headerText: {
         fontSize: 20,
