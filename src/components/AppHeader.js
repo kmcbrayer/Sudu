@@ -8,7 +8,7 @@ import {
 export default class AppHeader extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.headerContainer}>
                 <Text style={styles.headerText}>
                     {this.props.text}
                 </Text>
@@ -18,7 +18,7 @@ export default class AppHeader extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    headerContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
