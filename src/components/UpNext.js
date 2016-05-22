@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 import AppHeader from './AppHeader.js';
+import DoList from './DoList';
 
 export default class UpNext extends Component {
     constructor(props) {
@@ -11,19 +12,11 @@ export default class UpNext extends Component {
         };
     }
 
-    componentDidMount() {
-        this.getInitialState()
-    }
-
-    getInitialState() {
-        this.setState({liked: true});
-    }
-
     render() {
         return (
             <View>
                 <AppHeader text={this.state.headerText}/>
-                <Text>text goes here</Text>
+                <DoList />
             </View>
         );
     }
